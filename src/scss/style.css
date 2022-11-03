@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -32,6 +32,8 @@ a {
   width: 100%;
 }
 
+
+
 .header {
   padding: 40px 0;
 }
@@ -41,11 +43,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .header__navigations {
@@ -53,11 +55,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 70px;
 }
 
@@ -66,8 +68,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 40px;
 }
 
@@ -75,5 +77,65 @@ a {
   color: var(--gray-text);
   font-weight: 500;
   font-size: 16px;
+  position: relative;
+}
+
+.header .menu__link:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  background-color: var(--green-text);
+  height: 3px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+@media (any-hover: hover) {
+  .header .menu__link:hover {
+    color: white;
+  }
+  .header .menu__link:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.header__btn {
+  border: 1px solid var(--green-text);
+  padding: 11px 29px;
+  color: white;
+  background-color: transparent;
+}
+
+.singin {
+  background-color: var(--green-text);
+  cursor: pointer;
+}
+
+@media (any-hover: hover) {
+  .singin:hover {
+    background-color: transparent;
+  }
+}
+
+.login {
+  cursor: pointer;
+}
+
+@media (any-hover: hover) {
+  .login:hover {
+    background-color: var(--green-text);
+  }
 }
 /*# sourceMappingURL=style.css.map */
